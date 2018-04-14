@@ -11,8 +11,8 @@ import javax.persistence.Table;
 import java.util.Date;
 
 @Table
-public class MakeFriend {
-    public MakeFriend(Integer personId1, Integer personId2, Date actionDate) {
+public class MakeFriends {
+    public MakeFriends(Integer personId1, Integer personId2, Date actionDate) {
         this.personId1 = personId1;
         this.personId2 = personId2;
         this.actionDate = actionDate;
