@@ -17,4 +17,5 @@ public interface MakeFriendRepository extends CassandraRepository<MakeFriend,Int
     @Query(value = "SELECT * FROM makefriends")
     List<MakeFriend> findAll();
 
+
 }
