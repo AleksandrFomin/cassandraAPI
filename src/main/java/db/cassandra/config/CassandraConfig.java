@@ -1,4 +1,4 @@
-package db.cassandra;
+package db.cassandra.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

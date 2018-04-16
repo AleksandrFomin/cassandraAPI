@@ -1,8 +1,6 @@
-package db.cassandra;
+package db.cassandra.classes;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.cassandra.core.cql.PrimaryKeyType;
 import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
@@ -11,22 +9,22 @@ import javax.persistence.Table;
 import java.util.Date;
 
 @Table
-public class MakeFriends {
-    public MakeFriends(Integer personId1, Integer personId2, Date actionDate) {
-        this.personId1 = personId1;
-        this.personId2 = personId2;
+public class UserLikeNews {
+    public UserLikeNews(Integer userId, Integer newsId, Date actionDate) {
+        this.userId = userId;
+        this.newsId = newsId;
         this.actionDate = actionDate;
     }
 
     @Getter
     @Setter
     @PrimaryKeyColumn(type = PrimaryKeyType.CLUSTERED)
-    private Integer personId1;
+    private Integer userId;
 
     @Getter
     @Setter
     @PrimaryKeyColumn(type = PrimaryKeyType.PARTITIONED)
-    private Integer personId2;
+    private Integer newsId;
 
     @Getter
     @Setter
