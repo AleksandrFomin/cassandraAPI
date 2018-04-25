@@ -16,18 +16,35 @@ public class GroupAddNews {
         this.actionDate = actionDate;
     }
 
-    @Getter
-    @Setter
     @PrimaryKeyColumn(type = PrimaryKeyType.CLUSTERED)
     private Integer groupId;
 
-    @Getter
-    @Setter
     @PrimaryKeyColumn(type = PrimaryKeyType.PARTITIONED)
     private Integer newsId;
 
-    @Getter
-    @Setter
     private Date actionDate;
 
+    public Integer getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(Integer groupId) {
+        this.groupId = groupId;
+    }
+
+    public Integer getNewsId() {
+        return newsId;
+    }
+
+    public void setNewsId(Integer newsId) {
+        this.newsId = newsId;
+    }
+
+    public Date getActionDate() {
+        return actionDate;
+    }
+
+    public void setActionDate(Date actionDate) {
+        this.actionDate = actionDate;
+    }
 }

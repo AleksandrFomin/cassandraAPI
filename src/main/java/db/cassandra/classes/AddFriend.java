@@ -1,7 +1,5 @@
 package db.cassandra.classes;
 
-import lombok.Getter;
-import lombok.Setter;
 import org.springframework.data.cassandra.core.cql.PrimaryKeyType;
 import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
 
@@ -16,18 +14,35 @@ public class AddFriend {
         this.actionDate = actionDate;
     }
 
-    @Getter
-    @Setter
     @PrimaryKeyColumn(type = PrimaryKeyType.CLUSTERED)
     private Integer personId1;
 
-    @Getter
-    @Setter
     @PrimaryKeyColumn(type = PrimaryKeyType.PARTITIONED)
     private Integer personId2;
 
-    @Getter
-    @Setter
     private Date actionDate;
 
+    public Integer getPersonId1() {
+        return personId1;
+    }
+
+    public void setPersonId1(Integer personId1) {
+        this.personId1 = personId1;
+    }
+
+    public Integer getPersonId2() {
+        return personId2;
+    }
+
+    public void setPersonId2(Integer personId2) {
+        this.personId2 = personId2;
+    }
+
+    public Date getActionDate() {
+        return actionDate;
+    }
+
+    public void setActionDate(Date actionDate) {
+        this.actionDate = actionDate;
+    }
 }

@@ -17,23 +17,46 @@ public class UserWriteComment {
         this.actionDate = actionDate;
     }
 
-    @Getter
-    @Setter
     @PrimaryKeyColumn(type = PrimaryKeyType.CLUSTERED)
     private Integer userId;
 
-    @Getter
-    @Setter
     @PrimaryKeyColumn(type = PrimaryKeyType.PARTITIONED)
     private Integer commentId;
 
-    @Getter
-    @Setter
     @PrimaryKeyColumn(type = PrimaryKeyType.PARTITIONED)
     private Integer newsId;
 
-    @Getter
-    @Setter
     private Date actionDate;
 
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
+    public Integer getCommentId() {
+        return commentId;
+    }
+
+    public void setCommentId(Integer commentId) {
+        this.commentId = commentId;
+    }
+
+    public Integer getNewsId() {
+        return newsId;
+    }
+
+    public void setNewsId(Integer newsId) {
+        this.newsId = newsId;
+    }
+
+    public Date getActionDate() {
+        return actionDate;
+    }
+
+    public void setActionDate(Date actionDate) {
+        this.actionDate = actionDate;
+    }
 }

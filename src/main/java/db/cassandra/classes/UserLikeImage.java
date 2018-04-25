@@ -16,18 +16,35 @@ public class UserLikeImage {
         this.actionDate = actionDate;
     }
 
-    @Getter
-    @Setter
     @PrimaryKeyColumn(type = PrimaryKeyType.CLUSTERED)
     private Integer userId;
 
-    @Getter
-    @Setter
     @PrimaryKeyColumn(type = PrimaryKeyType.PARTITIONED)
     private Integer imageId;
 
-    @Getter
-    @Setter
     private Date actionDate;
 
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
+    public Integer getImageId() {
+        return imageId;
+    }
+
+    public void setImageId(Integer imageId) {
+        this.imageId = imageId;
+    }
+
+    public Date getActionDate() {
+        return actionDate;
+    }
+
+    public void setActionDate(Date actionDate) {
+        this.actionDate = actionDate;
+    }
 }

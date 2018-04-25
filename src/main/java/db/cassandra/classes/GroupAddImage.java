@@ -16,18 +16,35 @@ public class GroupAddImage {
         this.actionDate = actionDate;
     }
 
-    @Getter
-    @Setter
     @PrimaryKeyColumn(type = PrimaryKeyType.CLUSTERED)
     private Integer groupId;
 
-    @Getter
-    @Setter
     @PrimaryKeyColumn(type = PrimaryKeyType.PARTITIONED)
     private Integer imageId;
 
-    @Getter
-    @Setter
     private Date actionDate;
 
+    public Integer getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(Integer groupId) {
+        this.groupId = groupId;
+    }
+
+    public Integer getImageId() {
+        return imageId;
+    }
+
+    public void setImageId(Integer imageId) {
+        this.imageId = imageId;
+    }
+
+    public Date getActionDate() {
+        return actionDate;
+    }
+
+    public void setActionDate(Date actionDate) {
+        this.actionDate = actionDate;
+    }
 }
